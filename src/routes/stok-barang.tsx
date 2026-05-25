@@ -48,8 +48,9 @@ function StokBarang() {
             <thead><tr><th></th><th>Nama</th><th>Stok</th><th>Harga Beli</th><th>Harga Jual</th><th>Terakhir Masuk</th><th></th></tr></thead>
             <tbody>
               {filtered.map((x)=>(
-                <>
-                  <tr key={x.id}>
+                <Fragment key={x.id}>
+                  <tr>
+                    <td></td>
                     <td>
                       {x.variants?.length > 1 ? (
                         <button onClick={()=>setExp({...exp, [x.id]: !exp[x.id]})}>
