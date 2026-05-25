@@ -46,7 +46,7 @@ export function useProfitTotals() {
   useEffect(() => {
     refresh();
     const ch = supabase
-      .channel("rt-profit-totals")
+      .channel(`rt-profit-totals-${Math.random().toString(36).slice(2)}`)
       .on(
         "postgres_changes",
         { event: "*", schema: "public", table: "profit_totals" },
@@ -90,7 +90,7 @@ export function useSettings() {
   useEffect(() => {
     refresh();
     const ch = supabase
-      .channel("rt-settings")
+      .channel(`rt-settings-${Math.random().toString(36).slice(2)}`)
       .on(
         "postgres_changes",
         { event: "*", schema: "public", table: "settings" },
