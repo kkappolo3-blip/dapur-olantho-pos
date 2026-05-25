@@ -16,6 +16,7 @@ export function useSupabaseData<T extends { id: string }>(
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const mounted = useRef(true);
+  const chanId = useRef(Math.random().toString(36).slice(2));
 
   const refresh = useCallback(async () => {
     try {
@@ -45,7 +46,7 @@ export function useSupabaseData<T extends { id: string }>(
     refresh();
     if (!opts.realtime) return () => { mounted.current = false; };
     const channel = supabase
-      .channel(`rt-${table}`)
+      .channel(`rt-${table}-${chanId.current}`)
       .on(
         "postgres_changes",
         { event: "*", schema: "public", table },
