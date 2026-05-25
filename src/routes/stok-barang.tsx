@@ -50,7 +50,6 @@ function StokBarang() {
               {filtered.map((x)=>(
                 <Fragment key={x.id}>
                   <tr>
-                    <td></td>
                     <td>
                       {x.variants?.length > 1 ? (
                         <button onClick={()=>setExp({...exp, [x.id]: !exp[x.id]})}>
@@ -76,7 +75,7 @@ function StokBarang() {
                       <td></td>
                     </tr>
                   ))}
-                </>
+                </Fragment>
               ))}
             </tbody>
           </table>
