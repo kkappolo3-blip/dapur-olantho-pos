@@ -9,8 +9,86 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TerimaBarangRouteImport } from './routes/terima-barang'
+import { Route as StokBarangRouteImport } from './routes/stok-barang'
+import { Route as RiwayatRouteImport } from './routes/riwayat'
+import { Route as PesananTanpaStokRouteImport } from './routes/pesanan-tanpa-stok'
+import { Route as PesanBarangRouteImport } from './routes/pesan-barang'
+import { Route as PengaturanRouteImport } from './routes/pengaturan'
+import { Route as PembagianLabaRouteImport } from './routes/pembagian-laba'
+import { Route as PelangganCicilanRouteImport } from './routes/pelanggan-cicilan'
+import { Route as ModalTalanganRouteImport } from './routes/modal-talangan'
+import { Route as DaftarSuplierRouteImport } from './routes/daftar-suplier'
+import { Route as ClosingRouteImport } from './routes/closing'
+import { Route as CatatPenjualanRouteImport } from './routes/catat-penjualan'
+import { Route as BiayaOperasionalRouteImport } from './routes/biaya-operasional'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TerimaBarangRoute = TerimaBarangRouteImport.update({
+  id: '/terima-barang',
+  path: '/terima-barang',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StokBarangRoute = StokBarangRouteImport.update({
+  id: '/stok-barang',
+  path: '/stok-barang',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RiwayatRoute = RiwayatRouteImport.update({
+  id: '/riwayat',
+  path: '/riwayat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PesananTanpaStokRoute = PesananTanpaStokRouteImport.update({
+  id: '/pesanan-tanpa-stok',
+  path: '/pesanan-tanpa-stok',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PesanBarangRoute = PesanBarangRouteImport.update({
+  id: '/pesan-barang',
+  path: '/pesan-barang',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PengaturanRoute = PengaturanRouteImport.update({
+  id: '/pengaturan',
+  path: '/pengaturan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PembagianLabaRoute = PembagianLabaRouteImport.update({
+  id: '/pembagian-laba',
+  path: '/pembagian-laba',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PelangganCicilanRoute = PelangganCicilanRouteImport.update({
+  id: '/pelanggan-cicilan',
+  path: '/pelanggan-cicilan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModalTalanganRoute = ModalTalanganRouteImport.update({
+  id: '/modal-talangan',
+  path: '/modal-talangan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DaftarSuplierRoute = DaftarSuplierRouteImport.update({
+  id: '/daftar-suplier',
+  path: '/daftar-suplier',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClosingRoute = ClosingRouteImport.update({
+  id: '/closing',
+  path: '/closing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CatatPenjualanRoute = CatatPenjualanRouteImport.update({
+  id: '/catat-penjualan',
+  path: '/catat-penjualan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BiayaOperasionalRoute = BiayaOperasionalRouteImport.update({
+  id: '/biaya-operasional',
+  path: '/biaya-operasional',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +97,214 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/biaya-operasional': typeof BiayaOperasionalRoute
+  '/catat-penjualan': typeof CatatPenjualanRoute
+  '/closing': typeof ClosingRoute
+  '/daftar-suplier': typeof DaftarSuplierRoute
+  '/modal-talangan': typeof ModalTalanganRoute
+  '/pelanggan-cicilan': typeof PelangganCicilanRoute
+  '/pembagian-laba': typeof PembagianLabaRoute
+  '/pengaturan': typeof PengaturanRoute
+  '/pesan-barang': typeof PesanBarangRoute
+  '/pesanan-tanpa-stok': typeof PesananTanpaStokRoute
+  '/riwayat': typeof RiwayatRoute
+  '/stok-barang': typeof StokBarangRoute
+  '/terima-barang': typeof TerimaBarangRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/biaya-operasional': typeof BiayaOperasionalRoute
+  '/catat-penjualan': typeof CatatPenjualanRoute
+  '/closing': typeof ClosingRoute
+  '/daftar-suplier': typeof DaftarSuplierRoute
+  '/modal-talangan': typeof ModalTalanganRoute
+  '/pelanggan-cicilan': typeof PelangganCicilanRoute
+  '/pembagian-laba': typeof PembagianLabaRoute
+  '/pengaturan': typeof PengaturanRoute
+  '/pesan-barang': typeof PesanBarangRoute
+  '/pesanan-tanpa-stok': typeof PesananTanpaStokRoute
+  '/riwayat': typeof RiwayatRoute
+  '/stok-barang': typeof StokBarangRoute
+  '/terima-barang': typeof TerimaBarangRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/biaya-operasional': typeof BiayaOperasionalRoute
+  '/catat-penjualan': typeof CatatPenjualanRoute
+  '/closing': typeof ClosingRoute
+  '/daftar-suplier': typeof DaftarSuplierRoute
+  '/modal-talangan': typeof ModalTalanganRoute
+  '/pelanggan-cicilan': typeof PelangganCicilanRoute
+  '/pembagian-laba': typeof PembagianLabaRoute
+  '/pengaturan': typeof PengaturanRoute
+  '/pesan-barang': typeof PesanBarangRoute
+  '/pesanan-tanpa-stok': typeof PesananTanpaStokRoute
+  '/riwayat': typeof RiwayatRoute
+  '/stok-barang': typeof StokBarangRoute
+  '/terima-barang': typeof TerimaBarangRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/biaya-operasional'
+    | '/catat-penjualan'
+    | '/closing'
+    | '/daftar-suplier'
+    | '/modal-talangan'
+    | '/pelanggan-cicilan'
+    | '/pembagian-laba'
+    | '/pengaturan'
+    | '/pesan-barang'
+    | '/pesanan-tanpa-stok'
+    | '/riwayat'
+    | '/stok-barang'
+    | '/terima-barang'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/biaya-operasional'
+    | '/catat-penjualan'
+    | '/closing'
+    | '/daftar-suplier'
+    | '/modal-talangan'
+    | '/pelanggan-cicilan'
+    | '/pembagian-laba'
+    | '/pengaturan'
+    | '/pesan-barang'
+    | '/pesanan-tanpa-stok'
+    | '/riwayat'
+    | '/stok-barang'
+    | '/terima-barang'
+  id:
+    | '__root__'
+    | '/'
+    | '/biaya-operasional'
+    | '/catat-penjualan'
+    | '/closing'
+    | '/daftar-suplier'
+    | '/modal-talangan'
+    | '/pelanggan-cicilan'
+    | '/pembagian-laba'
+    | '/pengaturan'
+    | '/pesan-barang'
+    | '/pesanan-tanpa-stok'
+    | '/riwayat'
+    | '/stok-barang'
+    | '/terima-barang'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BiayaOperasionalRoute: typeof BiayaOperasionalRoute
+  CatatPenjualanRoute: typeof CatatPenjualanRoute
+  ClosingRoute: typeof ClosingRoute
+  DaftarSuplierRoute: typeof DaftarSuplierRoute
+  ModalTalanganRoute: typeof ModalTalanganRoute
+  PelangganCicilanRoute: typeof PelangganCicilanRoute
+  PembagianLabaRoute: typeof PembagianLabaRoute
+  PengaturanRoute: typeof PengaturanRoute
+  PesanBarangRoute: typeof PesanBarangRoute
+  PesananTanpaStokRoute: typeof PesananTanpaStokRoute
+  RiwayatRoute: typeof RiwayatRoute
+  StokBarangRoute: typeof StokBarangRoute
+  TerimaBarangRoute: typeof TerimaBarangRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terima-barang': {
+      id: '/terima-barang'
+      path: '/terima-barang'
+      fullPath: '/terima-barang'
+      preLoaderRoute: typeof TerimaBarangRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stok-barang': {
+      id: '/stok-barang'
+      path: '/stok-barang'
+      fullPath: '/stok-barang'
+      preLoaderRoute: typeof StokBarangRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/riwayat': {
+      id: '/riwayat'
+      path: '/riwayat'
+      fullPath: '/riwayat'
+      preLoaderRoute: typeof RiwayatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pesanan-tanpa-stok': {
+      id: '/pesanan-tanpa-stok'
+      path: '/pesanan-tanpa-stok'
+      fullPath: '/pesanan-tanpa-stok'
+      preLoaderRoute: typeof PesananTanpaStokRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pesan-barang': {
+      id: '/pesan-barang'
+      path: '/pesan-barang'
+      fullPath: '/pesan-barang'
+      preLoaderRoute: typeof PesanBarangRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pengaturan': {
+      id: '/pengaturan'
+      path: '/pengaturan'
+      fullPath: '/pengaturan'
+      preLoaderRoute: typeof PengaturanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pembagian-laba': {
+      id: '/pembagian-laba'
+      path: '/pembagian-laba'
+      fullPath: '/pembagian-laba'
+      preLoaderRoute: typeof PembagianLabaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pelanggan-cicilan': {
+      id: '/pelanggan-cicilan'
+      path: '/pelanggan-cicilan'
+      fullPath: '/pelanggan-cicilan'
+      preLoaderRoute: typeof PelangganCicilanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/modal-talangan': {
+      id: '/modal-talangan'
+      path: '/modal-talangan'
+      fullPath: '/modal-talangan'
+      preLoaderRoute: typeof ModalTalanganRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/daftar-suplier': {
+      id: '/daftar-suplier'
+      path: '/daftar-suplier'
+      fullPath: '/daftar-suplier'
+      preLoaderRoute: typeof DaftarSuplierRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/closing': {
+      id: '/closing'
+      path: '/closing'
+      fullPath: '/closing'
+      preLoaderRoute: typeof ClosingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/catat-penjualan': {
+      id: '/catat-penjualan'
+      path: '/catat-penjualan'
+      fullPath: '/catat-penjualan'
+      preLoaderRoute: typeof CatatPenjualanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/biaya-operasional': {
+      id: '/biaya-operasional'
+      path: '/biaya-operasional'
+      fullPath: '/biaya-operasional'
+      preLoaderRoute: typeof BiayaOperasionalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +317,20 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BiayaOperasionalRoute: BiayaOperasionalRoute,
+  CatatPenjualanRoute: CatatPenjualanRoute,
+  ClosingRoute: ClosingRoute,
+  DaftarSuplierRoute: DaftarSuplierRoute,
+  ModalTalanganRoute: ModalTalanganRoute,
+  PelangganCicilanRoute: PelangganCicilanRoute,
+  PembagianLabaRoute: PembagianLabaRoute,
+  PengaturanRoute: PengaturanRoute,
+  PesanBarangRoute: PesanBarangRoute,
+  PesananTanpaStokRoute: PesananTanpaStokRoute,
+  RiwayatRoute: RiwayatRoute,
+  StokBarangRoute: StokBarangRoute,
+  TerimaBarangRoute: TerimaBarangRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
